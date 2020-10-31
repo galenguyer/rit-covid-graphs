@@ -28,25 +28,25 @@ const App = () => {
     const headings = data.shift();
 
     const totalCases = data.map((element) => {
-      return {
-          date: element[0],
-          count: parseInt(element[3], 10),
-      };
-  });
+        return {
+            date: element[0],
+            count: parseInt(element[3], 10),
+        };
+    });
 
-  const rollingSevenDay = data.map((element) => {
-    return {
-        date: element[0],
-        count: parseInt(element[2], 10),
-    };
-});
+    const rollingSevenDay = data.map((element) => {
+        return {
+            date: element[0],
+            count: parseInt(element[2], 10),
+        };
+    });
 
     return (
         <div className="App">
-        <h2>Total Cases</h2>
-        <LineGraph data={totalCases} />
-        <h2>Rolling 7 Day New Case Total</h2>
-        <BarGraph data={rollingSevenDay} />
+            <h2>Total Cases</h2>
+            <LineGraph data={totalCases} />
+            <h2>Rolling 7 Day New Case Total</h2>
+            <BarGraph data={rollingSevenDay} />
         </div>
     );
 };

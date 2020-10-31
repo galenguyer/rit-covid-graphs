@@ -6,7 +6,12 @@ const LineGraph = (props) => {
     return (
         <div className="Graph">
             <ResponsiveContainer>
-                <AreaChart width={730} height={250} data={props.data} margin={{ top: 15, right: 30, left: 20, bottom: 5 }}>
+                <AreaChart
+                    width={730}
+                    height={250}
+                    data={props.data}
+                    margin={{ top: 15, right: 30, left: 20, bottom: 5 }}
+                >
                     <defs>
                         <linearGradient id="count" x1="0" y1="0" x2="0" y2="1">
                             <stop offset="5%" stopColor="#8884d8" stopOpacity={0.8} />
@@ -16,8 +21,7 @@ const LineGraph = (props) => {
                     <XAxis dataKey="date" interval={7} tick={<CustomizedAxisTick />} height={90} />
                     <CartesianGrid strokeDasharray="3 3" />
                     <Area type="monotone" dataKey="count" stroke="#8884d8" fillOpacity={1} fill="url(#colorUv)" />
-                    <YAxis dataKey="count" type="number">
-                    </YAxis>
+                    <YAxis dataKey="count" type="number"></YAxis>
                     <Tooltip />
                 </AreaChart>
             </ResponsiveContainer>
