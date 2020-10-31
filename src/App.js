@@ -30,7 +30,7 @@ const App = () => {
     const totalCases = data.map((element) => {
         return {
             date: element[0],
-            count: parseInt(element[3], 10),
+            count: parseInt(element[4], 10),
         };
     });
 
